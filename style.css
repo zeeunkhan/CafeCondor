@@ -126,7 +126,8 @@ section {
   color: #666;
 }
 
-.header .navbar a {
+.header .navbar a
+ {
   font-size: 20px;
   margin-left: 2rem;
   color: white;
@@ -294,12 +295,12 @@ section {
   font-family: serif;
 }
 .aboutus p {
-  font-size: 30px;
+  font-size: 20px;
   line-height: 110%;
   text-align: center;
   font-weight: 700px;
   color: whitesmoke;
-  padding-bottom: 10%;
+  padding-bottom: 2%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -368,66 +369,6 @@ section {
   position: relative;
   border-bottom: 3px solid;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
-}
-
-/*order form*/
-.order .row {
-  padding: 2rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  background: #fff;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  border-radius: 0.5rem;
-}
-
-.order .row .image {
-  flex: 1 1 30rem;
-}
-
-.order .row .image img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 0.5rem;
-}
-
-.order .row form {
-  flex: 1 1 50rem;
-  padding: 1rem;
-}
-
-.order .row form .inputBox {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.order .row form .inputBox input,
-.order .row form textarea {
-  padding: 1rem;
-  margin: 1rem 0;
-  font-size: 1.7rem;
-  color: #333;
-  text-transform: none;
-  border: 0.1rem solid rgba(0, 0, 0, 0.3);
-  border-radius: 0.5rem;
-  width: 49%;
-}
-
-.order .row form textarea {
-  width: 100%;
-  resize: none;
-  height: 15rem;
-}
-
-.order .row form .btn {
-  background: none;
-}
-
-.order .row form .btn:hover {
-  background: brown;
-  color: whitesmoke;
 }
 
 .footer {
@@ -657,76 +598,6 @@ section {
   }
 }
 
-@media (max-width: 450px) {
-  html {
-    font-size: 50%;
-  }
-
-  .order .row form .inputBox input {
-    width: 100%;
-  }
-}
-
-.shoppingcart h1 {
-  width: 3%;
-  position: relative;
-  top: 60px;
-  left: 90%;
-  cursor: pointer;
-}
-.shoppingcart h1::before {
-  content: attr(data-count);
-  position: absolute;
-  color: black;
-  right: 16px;
-  font-size: 15px;
-  text-align: center;
-  top: -12px;
-  width: 20px;
-  height: 20px;
-  background: red;
-  border-radius: 50%;
-  opacity: 0;
-}
-
-section .shoppingcart {
-  width: 90%;
-  height: 400px;
-  display: flex;
-  justify-content: space-around;
-  margin: 100px;
-}
-section .div {
-  width: 22%;
-  height: 93%;
-  background: grey;
-  padding: 1%;
-  position: relative;
-}
-.shoppingcart .shcart .img {
-  width: 200px;
-  height: 180px;
-}
-.shoppingcart .shcart .p {
-  margin: 5px;
-  font-size: auto;
-  color: hotpink;
-}
-.shoppingcart .shcart .h5 {
-  width: 50px;
-  padding: 50px;
-  margin: 10px;
-  font-size: 15px;
-}
-.shoppingcart .shcart .button {
-  padding: 5px;
-  background: blue;
-  border: none;
-  outline: none;
-  font-weight: bold;
-  color: orange;
-  cursor: pointer;
-}
 /*menu page css*/
 .fooditem {
   display: flex;
@@ -745,11 +616,18 @@ section .div {
   position: relative;
 }
 .menuitemimage {
-  height: 25rem;
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+  /* height: 25rem;
   object-fit: cover;
   width: 100%;
   border-radius: 0.5rem;
-  background-color: purple;
+  background-color: purple; */
 }
 .menuitem {
   color: #333;
@@ -799,15 +677,28 @@ section .div {
   background-color: burlywood;
 }
 /*cart css*/
+.fooditemcart {
+  padding-left: 20px;
+}
+.fooditemcart h2 {
+  display: flex;
+  text-align: center;
+  position: relative;
+  font-size: 45px;
+  color: black;
+  text-align: center;
+  background-color: burlywood;
+}
 .cart-row {
   display: flex;
 }
 .cafe-item-details {
   display: flex;
+  grid-column-gap: 20px;
   align-items: center;
   padding: 5px;
 }
-.cart-quantity-input {
+.it-btn {
   height: 34px;
   width: 50px;
   border-radius: 5px;
@@ -836,9 +727,9 @@ section .div {
 
 .cart-total-title {
   font-weight: bold;
-  font-size: 1.5em;
-  color: black;
-  margin-right: 20px;
+    font-size: 1.5em;
+    color: black;
+    margin-right: 20px;
 }
 
 .cart-total-price {
@@ -849,7 +740,7 @@ section .div {
 .cart-header {
   font-weight: bold;
   font-size: 1.25em;
-  color: #333;
+  color: #333;;
 }
 
 .cart-column {
@@ -862,9 +753,9 @@ section .div {
   
 }
 
-
 .cart-item {
   width: auto;
+  margin: auto;
 }
 
 .cart-price {
@@ -891,9 +782,8 @@ section .div {
 
 .buy-btn {
   display: block;
-  margin: 40px auto 8px auto;
+  margin: 40px auto 80px auto;
   font-size: 1.75em;
-  background-color: green;
 }
 .mainbtn {
   color: white;
@@ -905,5 +795,17 @@ section .div {
   
 }
 .mainbtn:hover {
-  background-color: brown;
+  background-color: purple;
+}
+
+.re-btn {
+  color: white;
+  background-color: #EB5757;
+  border: none;
+  border-radius: .3em;
+  font-weight: bold;
+}
+
+.re-btn:hover {
+  background-color: #CC4C4C;
 }
